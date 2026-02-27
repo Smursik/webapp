@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+<h2>🚀 Telegram Mini App</h2>
+<p id="user"></p>
+
+<script>
+const tg = window.Telegram.WebApp;
+tg.expand();
+
+document.getElementById("user").innerText =
+  "Привет, " + (tg.initDataUnsafe.user?.first_name || "гость");
+</script>
+
+</body>
+</html>
